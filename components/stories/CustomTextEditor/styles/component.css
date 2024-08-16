@@ -1,0 +1,85 @@
+@layer components {
+    .field {
+        @apply flex flex-col items-start w-full;
+    }
+    label,
+    .label {
+        @apply flex items-center gap-2 mb-2 text-sm font-medium text-gray-500;
+    }
+    .input-field {
+        @apply w-full !bg-gray-100 px-4 py-2.5 outline-none text-black rounded-lg relative !text-start border;
+    }
+    .input-field-search {
+        @apply w-full bg-transparent font-medium pr-4 py-[13px] outline-none text-sm relative !text-start;
+    }
+    .btn-disabled {
+        @apply disabled:cursor-not-allowed disabled:bg-grey2;
+    }
+    .btn {
+        @apply font-bold rounded-xl cursor-pointer disabled:bg-grey2 center disabled:text-dark disabled:cursor-not-allowed text-sm;
+    }
+    .btn-base {
+        @apply px-4 py-3 btn;
+    }
+    .b-primary {
+        @apply bg-dark text-white;
+    }
+    .btn-sm {
+        @apply btn text-sm !px-3 !py-1;
+    }
+    .btn-xs {
+        @apply btn text-xs !px-3 !py-1.5;
+    }
+    .btn-primary {
+        @apply btn-base b-primary;
+    }
+    .btn-outline {
+        @apply btn-base text-dark bg-transparent border border-dark;
+    }
+    .btn-outline-xs {
+        @apply btn-xs text-dark bg-transparent border border-dark;
+    }
+    .btn-primary-sm {
+        @apply btn-sm b-primary;
+    }
+    .btn-primary-xs {
+        @apply btn-xs b-primary;
+    }
+    .input-field::placeholder,
+    .input-field-search::placeholder {
+        @apply !text-start;
+    }
+    .input-field-search::placeholder {
+        color: var(--grey8);
+    }
+    .main-body {
+        @apply flex justify-start w-full h-full md:p-6;
+    }
+    .content-box {
+        @apply bg-light md:rounded-lg px-5 py-6 w-full md:w-auto min-w-[375px] xl:min-w-[450px] md:max-w-[70%]  flex flex-col h-full;
+        box-shadow: 0px 0px 64px rgba(0, 0, 0, 0.05);
+    }
+    .modal-btn {
+        @apply flex justify-center w-full px-4 py-[11px] mt-6 font-bold border rounded-lg cursor-pointer border-grey6 text-dark disabled:bg-gray-500 disabled:cursor-not-allowed;
+    }
+
+    .profile-inner {
+        @apply flex flex-col md:px-14 md:py-12  p-6 relative  h-full  overflow-hidden;
+    }
+    .profile-title {
+        @apply md:text-[32px] text-2xl font-bold flex items-center gap-4;
+    }
+    .card {
+        @apply rounded-md  bg-white p-6 border;
+    }
+    .card-header {
+        @apply font-bold pb-4 text-lg;
+    }
+
+    .stat-card {
+        @apply rounded-md shadow-sm bg-white;
+    }
+    .link {
+        @apply text-[#4848ED] underline;
+    }
+}

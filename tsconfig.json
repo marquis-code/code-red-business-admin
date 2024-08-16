@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+		"noImplicitAny": false,
+	},
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "types": ["@types/node", "types/gtag"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  }
+}

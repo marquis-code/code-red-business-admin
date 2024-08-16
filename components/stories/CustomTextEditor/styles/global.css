@@ -1,0 +1,190 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap'); */
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-Black.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-Black.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-Black.otf') format('opentype');
+  font-weight: 900; /* 900 is typically the weight for 'black' or 'heavy' fonts */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-Bold.otf') format('opentype');
+  font-weight: bold; /* 'bold' is typically represented as 700 weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-Light.otf') format('opentype');
+  font-weight: 300; /* 300 is typically the weight for 'light' fonts */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-Medium.otf') format('opentype');
+  font-weight: 500; /* 500 is typically the weight for 'medium' fonts */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/satoshi/Satoshi-Regular.otf') format('opentype');
+  font-weight: normal; /* 'normal' is typically represented as 400 weight */
+  font-style: normal;
+}
+
+* {
+  font-family: 'Satoshi', sans-serif;
+}
+
+html,
+body {
+  @apply overflow-x-hidden;
+  scroll-behavior: smooth;
+  background-color: var(--grey11);
+}
+
+select,
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  margin: 0;
+}
+
+select {
+  overflow: hidden;
+  overflow: -moz-hidden-unscrollable;
+  background: url('../../assets/icons/source/down.svg') #fafafa;
+  background-repeat: no-repeat;
+  background-attachment: relative;
+  background-position: 98% 50%;
+  z-index: 1;
+}
+
+.slideUp-enter-from,
+.slideUp-leave-to {
+  opacity: 0;
+  transform: translateY(500px);
+}
+
+.slideUp-enter-active,
+.slideUp-leave-active {
+  transition: all 0.35s ease;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.2s ease;
+}
+.slide-enter-from,
+.slide-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.25s linear;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  @media screen and (max-width: 640px) {
+    transform: translateY(500px);
+  }
+}
+
+.wc-datepicker__date--selected > *,
+.wc-datepicker__date--selected:hover > * {
+  color: #fff;
+  background-color: var(--green7) !important;
+  font-weight: 500;
+}
+
+.animate-loading {
+  background: linear-gradient(to right, #77767633 8%, #8282824d 18%, #82828233 33%);
+  background-size: 800px 100px;
+  animation: Gradient 2s ease-out infinite;
+}
+@keyframes Gradient {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light_primary);
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8885;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #8886;
+}
